@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+<title>ADD Person</title>
+{% endblock %}
+
+{% block content %}
+<center>
+    <p>DO YOU REALLY WANT TO DELETE THIS<span>{data.name}</span> DATA?</p>
+    <button><a href="{% url 'show_url' %}">YES</a></button>
+    <button><a href="={% url 'show_url' %}">NO</a></button>
+</center>
+{% endblock %}

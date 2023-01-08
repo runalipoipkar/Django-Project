@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+<title>ADD Person</title>
+{% endblock %}
+
+{% block content %}
+<div class="container jumbotron">
+    <form method="post">
+        {% csrf_token %}
+        <label for="un">Enter Username:</label>
+        <input type="text" id="un" name="un" class="form-control"><br><br>
+        <label for="pw">Enter Password:</label>
+        <input type="password" id="pw" name="pw" class="form-control"><br><br>
+        <button><a href="{% url 'show_url' %}">Login</a></button>
+        <button><a href="{% url 'signup_url' %}">Signup</a></button>
+
+    </form>
+</div>
+{% endblock %}
